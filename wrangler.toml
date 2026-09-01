@@ -1,0 +1,21 @@
+name = "planefinder"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+not_found_handling = "single-page-application"
+
+# For Postgres you need Hyperdrive or Neon HTTP
+# Example Hyperdrive (uncomment and set):
+# [[hyperdrive]]
+# binding = "HYPERDRIVE"
+# id = "your-hyperdrive-id"
+
+[vars]
+NEXT_PUBLIC_APP_URL = "https://planefinder.dev"
+
+# Secrets set via:
+# npx wrangler secret put DATABASE_URL
+# npx wrangler secret put ADMIN_ACCESS_CODE
+# npx wrangler secret put ADMIN_TOKEN
